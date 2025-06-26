@@ -130,14 +130,14 @@ const LoginPage = () => {
           // IMS
           // manager navigation
           if (userRole === 'manager' && userSystem === 'IMS') {
-            const targetUrl = new URL('http://localhost:3000/manager/dashboard/');
+            const targetUrl = new URL('https://bleu-ims.vercel.app/manager/dashboard/');
             targetUrl.searchParams.append('username', trimmedUsername);
             targetUrl.searchParams.append('authorization', access_token);
             window.location.href = targetUrl.toString();
           }
           // staff navigation
           else if (userRole === 'staff' && userSystem === 'IMS') {
-            const targetUrl = new URL('http://localhost:3000/staff/dashboard/');
+            const targetUrl = new URL('https://bleu-ims.vercel.app/staff/dashboard/');
             targetUrl.searchParams.append('username', trimmedUsername);
             targetUrl.searchParams.append('authorization', access_token);
             window.location.href = targetUrl.toString();
