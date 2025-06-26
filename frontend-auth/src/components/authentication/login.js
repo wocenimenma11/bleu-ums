@@ -100,7 +100,7 @@ const LoginPage = () => {
       formBody.append('username', trimmedUsername);
       formBody.append('password', trimmedPassword);
 
-      const response = await fetch('http://127.0.0.1:4000/auth/token', {
+      const response = await fetch('https://bleu-ums.onrender.com/auth/token', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -146,7 +146,7 @@ const LoginPage = () => {
           // POS
           // admin navigation
           else if (userRole === 'admin' && userSystem === 'POS') {
-            const targetUrl = new URL('http://localhost:4001/admin/dashboard/');
+            const targetUrl = new URL('https://bleu-pos-eight.vercel.app/admin/dashboard/');
             targetUrl.searchParams.append('username', trimmedUsername);
             targetUrl.searchParams.append('authorization', access_token);
             window.location.href = targetUrl.toString();
