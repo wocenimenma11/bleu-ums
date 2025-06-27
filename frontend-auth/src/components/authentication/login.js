@@ -162,20 +162,20 @@ const LoginPage = () => {
           //OOS 
           // admin navigation
           else if (userRole === 'admin' && userSystem === 'OOS') {
-            const targetUrl = new URL('http://localhost:5000/admin/dashboard/');
+            const targetUrl = new URL('https://bleu-oos.vercel.app/admin/dashboard/');
             targetUrl.searchParams.append('username', trimmedUsername);
             targetUrl.searchParams.append('authorization', access_token);
             window.location.href = targetUrl.toString();
           }
           //rider navigation
           else if (userRole === 'rider' && userSystem === 'OOS') {
-            const targetUrl = new URL('http://localhost:5000/rider/home');
+            const targetUrl = new URL('https://bleu-oos.vercel.app/rider/home');
             targetUrl.searchParams.append('username', trimmedUsername);
             targetUrl.searchParams.append('authorization', access_token);
             window.location.href = targetUrl.toString();
           }
            else if (userRole === 'user' && userSystem === 'OOS') {
-            const targetUrl = new URL('http://localhost:5000/');
+            const targetUrl = new URL('https://bleu-oos.vercel.app/');
             targetUrl.searchParams.append('username', trimmedUsername);
             targetUrl.searchParams.append('authorization', access_token);
             window.location.href = targetUrl.toString();
