@@ -153,7 +153,7 @@ const LoginPage = () => {
           }
           // cashier navigation
           else if (userRole === 'cashier') {
-            const targetUrl = new URL('http://localhost:4001/cashier/menu');
+            const targetUrl = new URL('https://bleu-pos-eight.vercel.app/cashier/menu');
             targetUrl.searchParams.append('username', trimmedUsername);
             targetUrl.searchParams.append('authorization', access_token);
             window.location.href = targetUrl.toString();
