@@ -144,7 +144,7 @@ const Signup = () => {
     formData.append("phoneNumber", phone);
     formData.append("email", email);
 
-    const response = await fetch("http://127.0.0.1:4000/users/signup-oos", {
+    const response = await fetch("https://bleu-ums.onrender.com/users/signup-oos", {
       method: "POST",
       body: formData,
     });
