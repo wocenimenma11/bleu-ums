@@ -294,40 +294,6 @@ const LoginPage = () => {
               <a href="/forgot-password"></a>
             </div>
             <button type="submit" className="login-button">Log In</button>
-            <button
-              type="button"
-              style={{
-                width: '100%',
-                marginTop: '10px',
-                padding: '10px',
-                backgroundColor: 'white',
-                color: '#555',
-                border: '1.5px solid #888',
-                borderRadius: '15px',
-                fontSize: '1rem',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '8px',
-                transition: 'background-color 0.3s ease',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-              }}
-              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f0f0f0'}
-              onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'white'}
-              onClick={() => {
-                alert('Google Sign-In clicked');
-              }}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
-                <path fill="#EA4335" d="M24 9.5c3.54 0 6.7 1.22 9.18 3.22l6.87-6.87C34.6 2.6 29.7 0 24 0 14.6 0 6.3 6.1 2.6 14.9l7.98 6.2C12.9 15.1 17.9 9.5 24 9.5z"/>
-                <path fill="#4285F4" d="M46.5 24c0-1.6-.15-3.1-.43-4.6H24v9h12.7c-.55 3-2.3 5.5-4.9 7.2l7.5 5.8c4.4-4 7-10 7-17.4z"/>
-                <path fill="#FBBC05" d="M10.6 28.1c-.4-1.2-.6-2.5-.6-3.8s.2-2.6.6-3.8l-7.98-6.2C.9 19.3 0 21.6 0 24s.9 4.7 2.6 6.7l7.98-6.2z"/>
-                <path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.7l-7.5-5.8c-2 1.3-4.5 2-7 2-6.1 0-11.1-4.6-12.3-10.7l-8 6.2C6.3 41.9 14.6 48 24 48z"/>
-                <path fill="none" d="M0 0h48v48H0z"/>
-              </svg>
-              Sign in with Google
-            </button>
           </form>
           {isLockedOut && (
             <div className="lockout-message" style={{ color: 'red', marginTop: '10px' }}>
